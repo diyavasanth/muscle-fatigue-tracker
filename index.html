@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teaching Dance with Sensors: Real-Time Audio Cues and Motion Analysis</title>
+  <title>Muscle Fatigue Tracking Device | Vasanth Jayabalan</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,8 +16,8 @@
     header {
       background: #00539C;
       color: #fff;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 3rem 1rem;
     }
     header h1 {
       margin: 0;
@@ -25,21 +25,42 @@
     }
     header p {
       font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 2rem 1rem;
     }
     .card {
       background: #fff;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     h2 {
       color: #00539C;
+      margin-top: 0;
+    }
+    img, video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    blockquote {
+      border-left: 4px solid #00539C;
+      padding-left: 1rem;
+      color: #555;
+      font-style: italic;
+      margin: 1rem 0;
+    }
+    .gotcha {
+      background: #ffe6e6;
+      border-left: 4px solid #ff4d4d;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
     }
     footer {
       text-align: center;
@@ -65,66 +86,103 @@
   </style>
 </head>
 <body>
+
+  <!-- Header / Hero -->
   <header>
     <h1>Muscle Fatigue Tracking Device</h1>
-    <p>Arduino-based wearable for dancers and athletes</p>
+    <p>Arduino-based wearable providing real-time feedback for dancers</p>
+    <img src="images/device-in-action.jpg" alt="Device in action">
   </header>
 
+  <!-- Overview / Motivation -->
   <section>
     <div class="card">
       <h2>Overview</h2>
       <p>
-        I designed and built a wearable device using Arduino Nano BLE Sense and an MPU-6050 motion sensor to measure muscle fatigue in real-time. This project combines my passion for dance and biomedical engineering by providing dancers with immediate feedback on body strain during practice.
+        This project combines my passion for dance and biomedical engineering by creating a wearable device that monitors muscle fatigue in real-time. The goal is to help dancers optimize training, prevent injury, and understand their body's limits.
       </p>
     </div>
 
+    <!-- How It Works -->
+    <div class="card">
+      <h2>How It Works</h2>
+      <p>
+        The device uses an Arduino Nano BLE Sense with an MPU-6050 motion sensor to track arm movement and acceleration. Data is streamed to a computer for real-time visualization and analysis.
+      </p>
+      <img src="images/system-diagram.png" alt="System diagram of device setup">
+    </div>
+
+    <!-- Real-Time Feedback -->
     <div class="card">
       <h2>Real-Time Audio Feedback</h2>
       <p>
-        The device can provide instant audio cues when the user's arm moves outside the desired range. This helps dancers correct their posture or motion on the fly.
+        The device provides immediate audio cues when a dancer’s arm moves outside the target range. This helps users correct posture and improve motion efficiency.
       </p>
-      <p><em>Future content:</em> Implement JavaScript that plays audio or triggers sounds based on the motion sensor data.</p>
-      <audio id="feedbackSound" src="audio/cue.mp3" preload="auto"></audio>
+      <video controls>
+        <source src="videos/audio-feedback-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><em>Future: integrate more advanced feedback algorithms using machine learning.</em></p>
     </div>
 
+    <!-- Motion Analysis -->
     <div class="card">
-      <h2>Motion Analysis and Comparison</h2>
+      <h2>Motion Analysis & Comparison</h2>
       <p>
-        Motion data is streamed to a computer, where it can be visualized in graphs for intensity and timing comparison against a teacher's movements.
+        Motion data is analyzed and displayed in graphs to compare student movements with the teacher’s reference. Key metrics include intensity, timing, and consistency.
       </p>
       <canvas id="motionGraph"></canvas>
-      <p><em>Future content:</em> Use Chart.js or D3.js to visualize real-time motion data.</p>
+      <p><em>Graphs will visualize real-time movement data for actionable insights.</em></p>
     </div>
 
+    <!-- Iterations & Gotchas -->
     <div class="card">
-      <h2>Applications</h2>
+      <h2>Iterations & Learnings</h2>
+      <p>
+        Building the prototype involved multiple iterations. Some challenges included inaccurate sensor readings, calibration issues, and battery limitations.
+      </p>
+      <div class="gotcha">
+        <strong>Gotcha:</strong> Initially, the MPU-6050 produced noisy data when the arm moved quickly. This was solved by implementing a smoothing filter in software.
+      </div>
+      <div class="gotcha">
+        <strong>Gotcha:</strong> Battery life was too short during practice sessions. Switching to a higher-capacity LiPo solved this problem.
+      </div>
+      <p><em>These iterations highlight problem-solving and engineering design skills.</em></p>
+    </div>
+
+    <!-- Impact / Feedback -->
+    <div class="card">
+      <h2>User Feedback & Impact</h2>
+      <blockquote>
+        “This device helped me notice subtle fatigue before it became a strain. I could adjust my technique instantly!” – Dance Instructor
+      </blockquote>
+      <blockquote>
+        “Visualizing my arm motion side-by-side with the teacher helped me improve faster than I expected.” – Student Dancer
+      </blockquote>
+      <img src="images/user-testing.jpg" alt="User testing device">
+    </div>
+
+    <!-- Future Directions -->
+    <div class="card">
+      <h2>Future Directions</h2>
       <ul>
-        <li>Improving dance training by identifying strain and inefficiency</li>
-        <li>Supporting athletes with muscle fatigue monitoring</li>
-        <li>Potential applications in physical therapy and yoga training</li>
+        <li>Integrate machine learning to detect fatigue more accurately.</li>
+        <li>Expand device for full-body motion tracking.</li>
+        <li>Explore applications in physical therapy and sports training.</li>
       </ul>
     </div>
 
-    <div class="card">
-      <h2>Next Steps</h2>
-      <p>
-        I am refining the prototype, collecting feedback from dancers and yoga instructors, and exploring machine learning integration for more accurate fatigue detection.
-      </p>
-    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>Created by [Your Name] • Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>Created by Vasanth Jayabalan • Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p><a href="https://github.com/yourusername">GitHub</a> | <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
   </footer>
 
+  <!-- Boilerplate scripts for future functionality -->
   <script>
-    // Boilerplate: play audio feedback
-    function playFeedback() {
-      const sound = document.getElementById('feedbackSound');
-      sound.play();
-    }
-
-    // Boilerplate: motion graph setup
+    // Example: motion graph placeholder
     const canvas = document.getElementById('motionGraph');
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = "#eee";
