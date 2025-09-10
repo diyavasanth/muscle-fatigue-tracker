@@ -74,4 +74,64 @@
     <div class="card">
       <h2>Overview</h2>
       <p>
-        I designed and built a wearable device using Arduino Nano BLE Sense and an MPU-6050 motion sensor to measure muscle
+        I designed and built a wearable device using Arduino Nano BLE Sense and an MPU-6050 motion sensor to measure muscle fatigue in real-time. This project combines my passion for dance and biomedical engineering by providing dancers with immediate feedback on body strain during practice.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Real-Time Audio Feedback</h2>
+      <p>
+        The device can provide instant audio cues when the user's arm moves outside the desired range. This helps dancers correct their posture or motion on the fly.
+      </p>
+      <p><em>Future content:</em> Implement JavaScript that plays audio or triggers sounds based on the motion sensor data.</p>
+      <audio id="feedbackSound" src="audio/cue.mp3" preload="auto"></audio>
+    </div>
+
+    <div class="card">
+      <h2>Motion Analysis and Comparison</h2>
+      <p>
+        Motion data is streamed to a computer, where it can be visualized in graphs for intensity and timing comparison against a teacher's movements.
+      </p>
+      <canvas id="motionGraph"></canvas>
+      <p><em>Future content:</em> Use Chart.js or D3.js to visualize real-time motion data.</p>
+    </div>
+
+    <div class="card">
+      <h2>Applications</h2>
+      <ul>
+        <li>Improving dance training by identifying strain and inefficiency</li>
+        <li>Supporting athletes with muscle fatigue monitoring</li>
+        <li>Potential applications in physical therapy and yoga training</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Next Steps</h2>
+      <p>
+        I am refining the prototype, collecting feedback from dancers and yoga instructors, and exploring machine learning integration for more accurate fatigue detection.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created by [Your Name] • Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  </footer>
+
+  <script>
+    // Boilerplate: play audio feedback
+    function playFeedback() {
+      const sound = document.getElementById('feedbackSound');
+      sound.play();
+    }
+
+    // Boilerplate: motion graph setup
+    const canvas = document.getElementById('motionGraph');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = "#eee";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#00539C";
+    ctx.font = "16px Arial";
+    ctx.fillText("Motion graph will appear here", 50, 150);
+  </script>
+</body>
+</html>
