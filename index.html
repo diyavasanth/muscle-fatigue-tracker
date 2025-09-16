@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teaching Dance & Yoga with Sensors: Real-Time Audio Cues and Motion Analysis | Diya Vasanth</title>
+  <title>Safe-Speed Choreography Assistant | Diya Vasanth</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -89,8 +89,8 @@
 
   <!-- Header / Hero -->
   <header>
-    <h1>Teaching Dance & Yoga with Sensors: Real-Time Audio Cues and Motion Analysis</h1>
-    <p>Arduino-based wearable providing real-time feedback and motion analysis for dancers and yoga practitioners</p>
+    <h1>Safe-Speed Choreography Assistant</h1>
+    <p>Arduino-based wearable system for dance safety</p>
     <img src="images/device-in-action.jpg" alt="Device in action">
   </header>
 
@@ -99,40 +99,67 @@
     <div class="card">
       <h2>Overview</h2>
       <p>
-        This project combines my passion for dance and biomedical engineering by creating a wearable device that monitors muscle fatigue in real-time. The goal is to help dancers optimize training, prevent injury, and understand their body's limits.
+        This project combines my passion for dance and biomedical engineering by creating a wearable device that transforms how dancers train safely. This Arduino-based smart device uses sophisticated motion sensors to track movement patterns and speed, providing instant feedback to prevent joint and muscle injuries. Already proven effective with young dancers, it represents the future of safe dance training.
       </p>
     </div>
 
     <!-- How It Works -->
     <div class="card">
       <h2>How It Works</h2>
-      <p>
-        The device uses an Arduino Nano BLE Sense with an MPU-6050 motion sensor to track arm movement and acceleration. Data is streamed to a computer for real-time visualization and analysis.
-      </p>
+      <div class="step-block">
+        <h3>1. Smart Sensing</h3>
+        <ul>
+            <li>Advanced motion sensors monitor your movements in real-time</li>
+            <li>Tracks both angular velocity (rotation) and linear acceleration</li>
+            <li>Built-in gyroscope and accelerometer provide precise 3D movement data</li>
+        </ul>
+    </div>
+
+    <div class="step-block">
+        <h3>2. Intelligent Processing</h3>
+        <ul>
+            <li>Arduino-based microcontroller analyzes movement patterns</li>
+            <li>Custom algorithms continuously evaluate motion parameters</li>
+            <li>Compares current movement against pre-set safety thresholds</li>
+        </ul>
+    </div>
+
+    <div class="step-block">
+        <h3>3. Instant Feedback</h3>
+        <ul>
+            <li>Provides immediate auditory alerts when safety limits are exceeded</li>
+            <li>Warns dancers about:</li>
+            <ul>
+                <li>Excessive joint angles</li>
+                <li>Dangerous movement speeds</li>
+                <li>Rapid directional changes</li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="step-block">
+        <h3>4. Safe Practice</h3>
+        <ul>
+            <li>Dancers adjust their movements based on real-time feedback</li>
+            <li>Helps maintain proper form and tempo</li>
+            <li>Builds muscle memory for safer dance techniques</li>
+        </ul>
+    </div>
+
+    <div class="step-block">
+        <h3>5. Easy Usage</h3>
+        <ul>
+            <li>Lightweight, wearable design</li>
+            <li>Attaches securely to arms or legs</li>
+            <li>Powered by long-lasting LiPo battery</li>
+            <li>Configurable thresholds for different skill levels</li>
+        </ul>
+    </div>
+
+    <p class="footer-note">
+        The system operates continuously during practice sessions, helping dancers develop safer movement habits while maintaining artistic expression.
+    </p>
       <img src="images/system-diagram.png" alt="System diagram of device setup">
-    </div>
-
-    <!-- Real-Time Feedback -->
-    <div class="card">
-      <h2>Real-Time Audio Feedback</h2>
-      <p>
-        The device provides immediate audio cues when a dancer’s arm moves outside the target range. This helps users correct posture and improve motion efficiency.
-      </p>
-      <video controls>
-        <source src="videos/audio-feedback-demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p><em>Future: integrate more advanced feedback algorithms using machine learning.</em></p>
-    </div>
-
-    <!-- Motion Analysis -->
-    <div class="card">
-      <h2>Motion Analysis & Comparison</h2>
-      <p>
-        Motion data is analyzed and displayed in graphs to compare student movements with the teacher’s reference. Key metrics include intensity, timing, and consistency.
-      </p>
-      <canvas id="motionGraph"></canvas>
-      <p><em>Graphs will visualize real-time movement data for actionable insights.</em></p>
     </div>
 
     <!-- Iterations & Gotchas -->
